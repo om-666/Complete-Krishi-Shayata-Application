@@ -1,0 +1,197 @@
+<button (click)="translate()"  style=" float:right; position: sticky; top: 10px; background-color: #25312d;" class="mt-2     text-white font-bold py-2 px-4 rounded">
+    {{ getButtonText() }}
+  </button>
+<div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-10 md:py-12 md:px-6 py-9 px-4">
+    
+
+
+
+
+
+    <!-- English Text  -->
+    <div id="English" *ngIf="isEnglishDisplayed"  >
+        <div class="flex flex-col lg:flex-row justify-between gap-8">
+            <div class="w-full lg:w-5/12 flex flex-col justify-center">
+                <h1 class=" mt-10 text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4"
+                    style="color: #25312d;">Our Mission
+
+                </h1>
+                <p class="font-normal  text-xl leading-6 text-gray-600 dark:text-white"
+                    style="color: #25312d; font-weight:800;">At Krishi Sahayata, our mission is to revolutionize crop insurance through innovation and technology. We understand the challenges faced by farmers and the government alike, and our solution aims to bridge the gap by providing a comprehensive platform for seamless crop insurance services.
+
+
+                </p>
+                <h1 class="text-3xl  mt-14 lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4"
+                    style="color: #25312d;">Our Solution
+
+                </h1>
+                <p class="font-normal mt-1  text-xl mb-8    leading-6 text-gray-600 dark:text-white"
+                    style="color: #25312d; font-weight:800;">Crop Insurance is an integrated IT solution and a web-based ecosystem designed to streamline service delivery, unify fragmented databases, and eliminate manual processes. Our platform offers features such as:
+
+
+
+                </p>
+                <ul style="color: #25312d; font-weight:800;" class="list-disc ml-2 text-lg mb-4">
+                    <li>Local-language support for enhanced accessibility
+                    </li>
+                    <li>SMS notifications and helpline support for farmers
+                    </li>
+                    <li>Verification of claims using meteorological data
+                    </li>
+                    <li>Transparent administration through Aadhar integration
+                    </li>
+                    <li>Guidance on insurance policies and video tutorials for farmer awareness
+                    </li>
+                </ul>
+            </div>
+            <div class="w-full lg:w-8/12">
+                <img class="w-full h-full" style="border: 2px solid whitesmoke;" src="./assets/pexels-pixabay-235731.jpg" alt="A group of People" />
+            </div>
+        </div>
+
+        <div class=" font-extrabold flex lg:flex-row flex-col justify-between gap-8 pt-12">
+            <div class="w-full lg:w-5/12 flex flex-col justify-center">
+                <h1 style="color: #25312d;"  class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4">About Us
+                </h1>
+                <p style="color: #25312d;" class="   text-gray-600 dark:text-white font-extrabold leading-relaxed text-xl ">We are a group of passionate 3rd-year students at Siksha 'O' Anusandhan University, driven by our shared love for technology and our commitment to solving real-world problems.
+
+
+                </p>
+
+            </div>
+            <div class="w-full lg:w-8/12 lg:pt-8 flex items-center justify-around">
+                <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/appi.jpg"
+                            alt="Alexa featured Image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
+                            alt="Alexa featured Image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">Sudiksha</p>
+                    </div>
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/otp1.jpg"
+                            alt="Olivia featured Image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
+                            alt="Olivia featured Image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">OTP</p>
+                    </div>
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/sumit.jpg"
+                            alt="Liam featued Image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
+                            alt="Liam featued Image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">Sumit</p>
+                    </div>
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/smriti.jpg"
+                            alt="Elijah featured image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                            alt="Elijah featured image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl  leading-5 text-gray-800 dark:text-white mt-4">Smriti</p>
+                    </div>
+                    <div class=" p-4 pb-6 flex justify-center flex-col items-center"
+                        style="display: flex; justify-content: center; align-items: center;">
+                        <img class="ml-96 md:block hidden rounded-full h-32a" src="./assets/chanchal.jpg"
+                            alt="Elijah featured image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                            alt="Elijah featured image" />
+                        <p    style="color: #59766c;" class="ml-96 font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">Chanchal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        ଓଡ଼ିଆ
+      </button> -->
+    </div>
+
+
+
+    <!-- Odia Text -->
+    <div id="Odia" *ngIf="!isEnglishDisplayed"  >
+        <div class="flex flex-col lg:flex-row justify-between gap-8">
+            <div class="w-full lg:w-5/12 flex flex-col justify-center">
+                <h1 class=" mt-10 text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4"
+                    style="color: #25312d;">ଆମର ଲକ୍ଷ୍ୟ
+                </h1>
+                <p class="font-normal  text-base leading-6 text-gray-600 dark:text-white"
+                    style="color: #25312d; font-weight:800;">କୃଷି ସହାୟତାରେ ଆମର ଲକ୍ଷ୍ୟ ହେଉଛି ଉଦ୍ଭାବନ ଏବଂ ପ୍ରଯୁକ୍ତି ବିଦ୍ୟା ମାଧ୍ୟମରେ ଫସଲ ବୀମାରେ ବୈପ୍ଳବିକ ପରିବର୍ତ୍ତନ ଆଣିବା । କୃଷକ ଏବଂ ସରକାର ସମାନ ଭାବରେ ସମ୍ମୁଖୀନ ହେଉଥିବା ଆହ୍ୱାନଗୁଡ଼ିକୁ ବୁଝୁଛୁ ଏବଂ ଆମର ସମାଧାନର ଉଦ୍ଦେଶ୍ୟ ନିରବଚ୍ଛିନ୍ନ ଫସଲ ବୀମା ସେବା ପାଇଁ ଏକ ବ୍ୟାପକ ପ୍ଲାଟଫର୍ମ ପ୍ରଦାନ କରି ଏହି ବ୍ୟବଧାନକୁ ପୂରଣ କରିବା।
+
+                </p>
+                <h1 class="text-3xl  mt-14 lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4"
+                    style="color: #25312d;">ଆମର ସମାଧାନ
+                </h1>
+                <p class="font-normal mt-1 text-base leading-6 text-gray-600 dark:text-white"
+                    style="color: #25312d; font-weight:800;">ଫସଲ ବୀମା ହେଉଛି ଏକ ସମନ୍ବିତ ଆଇଟି ସମାଧାନ ଏବଂ ଏକ ୱେବ-ଆଧାରିତ ଇକୋସିଷ୍ଟମ ଯାହା ସେବା ବିତରଣକୁ ସୁବ୍ୟବସ୍ଥିତ କରିବା, ଖଣ୍ଡିତ ଡାଟାବେସକୁ ଏକାଠି କରିବା ଏବଂ ମାନୁଆଲ ପ୍ରକ୍ରିୟାଗୁଡିକୁ ଦୂର କରିବା ପାଇଁ ଡିଜାଇନ୍ କରାଯାଇଛି । ଆମ ପ୍ଲାଟଫର୍ମ ବୈଶିଷ୍ଟ୍ୟ ଗୁଡିକ ପ୍ରଦାନ କରେ ଯେପରିକି:
+
+
+                </p>
+                <ul style="color: #25312d; font-weight:800;" class="list-disc ml-2 text-lg mb-4">
+                    <li>ଉନ୍ନତ ଉପଲବ୍ଧତା ପାଇଁ ସ୍ଥାନୀୟ ଭାଷା ସମର୍ଥନ</li>
+                    <li>କୃଷକମାନଙ୍କ ପାଇଁ ଏସଏମଏସ ବିଜ୍ଞପ୍ତି ଏବଂ ହେଲ୍ପଲାଇନ ସହାୟତା</li>
+                    <li>ପାଣିପାଗ ତଥ୍ୟ ବ୍ୟବହାର କରି ଦାବି ଯାଞ୍ଚ </li>
+                    <li>ଆଧାର ଏକୀକରଣ ମାଧ୍ୟମରେ ସ୍ୱଚ୍ଛ ପ୍ରଶାସନ</li>
+                    <li>କୃଷକ ସଚେତନତା ପାଇଁ ବୀମା ପଲିସି ଏବଂ ଭିଡିଓ ଟ୍ୟୁଟୋରିଆଲ ଉପରେ ମାର୍ଗଦର୍ଶନ</li>
+                </ul>
+            </div>
+            <div class="w-full lg:w-8/12">
+                <img class="w-full h-full" style="border: 2px solid whitesmoke;" src="./assets/pexels-pixabay-235731.jpg" alt="A group of People" />
+            </div>
+        </div>
+
+        <div class=" font-extrabold flex lg:flex-row flex-col justify-between gap-8 pt-12">
+            <div class="w-full lg:w-5/12 flex flex-col justify-center">
+                <h1 style="color: #25312d;"  class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4">ଆମର କାହାଣୀ </h1>
+                <p style="color: #25312d;" class="   text-gray-600 dark:text-white font-extrabold leading-relaxed text-xl">ଶିକ୍ଷା ‘ଓ’ ଅନୁସନ୍ଧାନ ବିଶ୍ୱବିଦ୍ୟାଳୟର ଆମେ ତୃତୀୟ ବର୍ଷର ଛାତ୍ରମାନଙ୍କ ଏକ ଗୋଷ୍ଠୀ, ଟେକ୍ନୋଲୋଜି ପ୍ରତି ଆମର ମିଳିତ ଭଲପାଇବା ଏବଂ ବାସ୍ତବ ଦୁନିଆର ସମସ୍ୟାର ସମାଧାନ ପାଇଁ ଆମର ପ୍ରତିବଦ୍ଧତା ଦ୍ୱାରା ପରିଚାଳିତ ।
+
+                </p>
+
+            </div>
+            <div class="w-full lg:w-8/12 lg:pt-8 flex items-center justify-around">
+                <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/appi.jpg"
+                            alt="Alexa featured Image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
+                            alt="Alexa featured Image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">Sudiksha</p>
+                    </div>
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/otp1.jpg"
+                            alt="Olivia featured Image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
+                            alt="Olivia featured Image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">OTP</p>
+                    </div>
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/sumit.jpg"
+                            alt="Liam featued Image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
+                            alt="Liam featued Image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">Sumit</p>
+                    </div>
+                    <div class="p-4 pb-6 flex justify-center flex-col items-center">
+                        <img class="md:block hidden rounded-full h-32 a" src="./assets/smriti.jpg"
+                            alt="Elijah featured image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                            alt="Elijah featured image" />
+                        <p    style="color: #25312d;" class="font-extrabold text-2xl  leading-5 text-gray-800 dark:text-white mt-4">Smriti</p>
+                    </div>
+                    <div class=" p-4 pb-6 flex justify-center flex-col items-center"
+                        style="display: flex; justify-content: center; align-items: center;">
+                        <img class="ml-96 md:block hidden rounded-full h-32a" src="./assets/chanchal.jpg"
+                            alt="Elijah featured image" />
+                        <img class="md:hidden block" src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
+                            alt="Elijah featured image" />
+                        <p    style="color: #59766c;" class="ml-96 font-extrabold text-2xl leading-5 text-gray-800 dark:text-white mt-4">Chanchal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        ଓଡ଼ିଆ
+      </button> -->
+    </div>
+
+
+</div>

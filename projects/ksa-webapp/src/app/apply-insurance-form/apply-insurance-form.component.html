@@ -1,0 +1,205 @@
+<!-- Apply Insurance Form Component -->
+<button
+  (click)="translate()"
+  style="float: right; position: sticky; top: 10px; background-color: #25312d;"
+  class="mt-2 text-white font-bold py-2 px-4 rounded"
+>
+  {{ getButtonText() }}
+</button>
+
+<div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-10 md:py-12 md:px-6 py-9 px-4">
+
+  <!-- English Section -->
+  <div class="container" id="English" style="margin-top: 8px; margin-bottom: auto;" *ngIf="isEnglishDisplayed">
+    <header>FARMER DETAILS</header>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form first">
+
+        <!-- Farmer Details Section -->
+        <div class="details personal">
+          <div class="fields">
+            <div class="input-field">
+              <label for="aadhar">Aadhar Number</label>
+              <input type="number" id="aadhar" name="aadhar" placeholder="Enter Aadhar Number" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="name">Farmer Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter Name" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="district">District</label>
+              <input type="text" id="district" name="district" placeholder="Enter District" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="pincode">Pin Code</label>
+              <input type="number" id="pincode" name="pincode" placeholder="Enter Pin Code" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="category">Farmer Category</label>
+              <select id="category" name="category" required ngModel>
+                <option value="" disabled selected>Select Farmer Category</option>
+                <option value="Small Farmer">Small Farmer</option>
+                <option value="Marginal Farmer">Marginal Farmer</option>
+                <option value="Big Farmer">Big Farmer</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="account">Bank Account No.</label>
+              <input type="number" id="account" name="account" placeholder="Enter Bank Account Number" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="branch">Branch Name</label>
+              <input type="text" id="branch" name="branch" placeholder="Enter Branch Name" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="ifsc">IFSC Code</label>
+              <input type="text" id="ifsc" name="ifsc" placeholder="Enter IFSC Code" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="mobile">Mobile No.</label>
+              <input type="tel" id="mobile" name="mobile" placeholder="Enter Mobile Number" required ngModel />
+            </div>
+          </div>
+        </div>
+        <!-- End Farmer Details Section -->
+
+        <!-- Crop Sowing Details Section -->
+        <div class="details crop">
+          <header>CROP SOWING DETAILS</header>
+          <div class="fields">
+            <div class="input-field">
+              <label for="crop">Name of the Crop</label>
+              <input type="text" id="crop" name="crop" placeholder="Enter Crop Name" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="date">Date of Sowing</label>
+              <input type="date" id="date" name="date" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="area">Area Sown (in acres)</label>
+              <input type="number" id="area" name="area" placeholder="Enter Area Sown" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="season">Season</label>
+              <select id="season" name="season" required ngModel>
+                <option value="" disabled selected>Select Season</option>
+                <option value="Rabi">Rabi</option>
+                <option value="Kharif">Kharif</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- End Crop Sowing Details Section -->
+
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Odia Section -->
+  <div class="container" id="Odia" style="margin-top: 8px; margin-bottom: auto;" *ngIf="!isEnglishDisplayed">
+    <header>କୃଷକ ବିବରଣୀ</header>
+    <form #formOdia="ngForm" (ngSubmit)="onSubmit(formOdia)">
+      <div class="form first">
+
+        <!-- Farmer Details Section -->
+        <div class="details personal">
+          <div class="fields">
+            <div class="input-field">
+              <label for="aadhar">ଆଧାର ସଂଖ୍ୟା</label>
+              <input type="number" id="aadhar" name="aadhar" placeholder="ଆଧାର କାର୍ଡ ନମ୍ବର ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="name">କୃଷକଙ୍କ ନାମ</label>
+              <input type="text" id="name" name="name" placeholder="ନାମ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="district">ଜିଲ୍ଲା</label>
+              <input type="text" id="district" name="district" placeholder="ଜିଲ୍ଲାର ନାମ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="pincode">ପିନ୍ କୋଡ୍</label>
+              <input type="number" id="pincode" name="pincode" placeholder="ପିନକୋଡ୍ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="category">କୃଷକ ଶ୍ରେଣୀ</label>
+              <select id="category" name="category" required ngModel>
+                <option value="" disabled selected>କୃଷକ ବର୍ଗ ବାଛନ୍ତୁ</option>
+                <option value="Small Farmer">କ୍ଷୁଦ୍ର କୃଷକ</option>
+                <option value="Marginal Farmer">ମଧ୍ୟାନ୍ତର କୃଷକ</option>
+                <option value="Big Farmer">ବଡ଼ କୃଷକ</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="account">ବ୍ୟାଙ୍କ ଖାତା ସଂଖ୍ୟା</label>
+              <input type="number" id="account" name="account" placeholder="ବ୍ୟାଙ୍କ ଆକାଉଣ୍ଟ ନମ୍ବର ଦାଖଲ କରନ୍ତୁ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="branch">ଶାଖା ନାମ</label>
+              <input type="text" id="branch" name="branch" placeholder="ଶାଖା ନାମ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="ifsc">IFSC କୋଡ୍</label>
+              <input type="text" id="ifsc" name="ifsc" placeholder="IFSC କୋଡ୍ ଦାଖଲ କରନ୍ତୁ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="mobile">ମୋବାଇଲ୍ ନମ୍ବର</label>
+              <input type="tel" id="mobile" name="mobile" placeholder="ମୋବାଇଲ୍ ନମ୍ବର ଦାଖଲ କରନ୍ତୁ" required ngModel />
+            </div>
+          </div>
+        </div>
+        <!-- End Farmer Details Section -->
+
+        <!-- Crop Sowing Details Section -->
+        <div class="details crop">
+          <header>ଫସଲ ବିବରଣୀ</header>
+          <div class="fields">
+            <div class="input-field">
+              <label for="crop">ଫସଲ ନାମ</label>
+              <input type="text" id="crop" name="crop" placeholder="ଫସଲ ନାମ ଦାଖଲ କରନ୍ତୁ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="date">ଫସଲ କାଟିବାର ତାରିଖ</label>
+              <input type="date" id="date" name="date" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="area">ଜମିର ଅଂଶ (ଏକରରେ)</label>
+              <input type="number" id="area" name="area" placeholder="ଜମିର ଅଂଶ" required ngModel />
+            </div>
+
+            <div class="input-field">
+              <label for="season">ଋତୁ</label>
+              <select id="season" name="season" required ngModel>
+                <option value="" disabled selected>ଋତୁ ବାଛନ୍ତୁ</option>
+                <option value="Rabi">ରବି</option>
+                <option value="Kharif">ଖରିଫ</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- End Crop Sowing Details Section -->
+
+        <button type="submit">ଦାଖଲ କରନ୍ତୁ</button>
+      </div>
+    </form>
+  </div>
+
+</div>

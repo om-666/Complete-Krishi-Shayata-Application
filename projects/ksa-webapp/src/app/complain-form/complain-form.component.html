@@ -1,0 +1,221 @@
+<button
+  (click)="translate()"
+  style="float: right; position: sticky; top: 10px; background-color: #25312d;"
+  class="mt-2 text-white font-bold py-2 px-4 rounded"
+>
+  {{ getButtonText() }}
+</button>
+
+<div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-10 md:py-12 md:px-6 py-9 px-4">
+
+  <!-- English Section -->
+  <div
+    class="container"
+    id="English"
+    style="margin-top: 8px; margin-bottom: auto"
+    *ngIf="isEnglishDisplayed"
+  >
+    <header>REPORT CROP LOSS</header>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="form first">
+        <div class="details personal">
+          <div class="fields">
+            <div class="input-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter Name" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="claimtype">Claim Type</label>
+              <select id="category" name="claimType" required ngModel>
+                <option value="" disabled selected>Select Claim Type</option>
+                <option value="Farm Vehicle Replacement">Farm Vehicle Replacement</option>
+                <option value="Irrigation System Maintenance">Irrigation System Maintenance</option>
+                <option value="Farm Liability Insurance">Farm Liability Insurance</option>
+                <option value="Agricultural Building Repair">Agricultural Building Repair</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="farmer-type">Farmer Type</label>
+              <select id="farmer-type" name="farmerType" required ngModel>
+                <option value="" disabled selected>Select Farmer Type</option>
+                <option value="small">Small</option>
+                <option value="semi-Medium">Semi-medium</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="amount">Amount</label>
+              <input type="number" id="amount" name="amount" placeholder="Enter Claim Amount" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="state">State</label>
+              <select id="state" name="state" required ngModel>
+                <option value="" disabled selected>Select State</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Punjab">Punjab</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="district">District</label>
+              <input type="text" id="district" name="district" placeholder="Enter Your District" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="bank-name">Bank Name</label>
+              <input type="text" id="bank-name" name="bankName" placeholder="Enter Bank Name" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="bank-branch">Bank Branch Number</label>
+              <input type="text" id="bank-branch" name="bankBranch" placeholder="Enter Bank Branch Number" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="account-number">Savings Account Number</label>
+              <input type="number" id="account-number" name="accountNumber" placeholder="Enter Savings Bank Account Number" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" placeholder="Enter Your Address" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="pincode">Pincode</label>
+              <input type="number" id="pincode" name="pincode" placeholder="Enter Pincode" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="area-impacted">Area Impacted</label>
+              <input type="number" id="area-impacted" name="areaImpacted" placeholder="Enter Area Impacted" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="cause-of-loss">Cause of Loss</label>
+              <select id="cause-of-loss" name="causeOfLoss" required ngModel>
+                <option value="" disabled selected>Select Cause of Loss</option>
+                <option value="drought">Drought</option>
+                <option value="flood">Flood</option>
+                <option value="frost">Frost</option>
+                <option value="hailstorm">Hailstorm</option>
+                <option value="windstorm">Windstorm</option>
+                <option value="excessive_heat">Excessive Heat</option>
+                <option value="excessive_rainfall">Excessive Rainfall</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Odia Section -->
+  <div
+    class="container"
+    id="Odia"
+    style="margin-top: 8px; margin-bottom: auto"
+    *ngIf="!isEnglishDisplayed"
+  >
+    <header>ଫସଲ କ୍ଷୟକ୍ଷତି ରିପୋର୍ଟ କରନ୍ତୁ</header>
+    <form #formOdia="ngForm" (ngSubmit)="onSubmit(formOdia)">
+      <div class="form first">
+        <div class="details personal">
+          <div class="fields">
+            <div class="input-field">
+              <label for="name">ନାମ</label>
+              <input type="text" id="name" name="name" placeholder="ନାମ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="claimtype">ବୀମା ଦାବିର ପ୍ରକାର</label>
+              <select id="category" name="claimType" required ngModel>
+                <option value="" disabled selected>ବୀମା ଦାବି ପ୍ରକାର ଚୟନ କରନ୍ତୁ</option>
+                <option value="Farm Vehicle Replacement">ଚାଷରେ ବ୍ୟବହୃତ ଗାଡ଼ି ବଦଳାଇବା ପାଇଁ</option>
+                <option value="Irrigation System Maintenance">ଜଳସେଚନ ବ୍ୟବସ୍ଥାର ରକ୍ଷଣାବେକ୍ଷଣ</option>
+                <option value="Farm Liability Insurance">କୃଷି ଦାୟିତ୍ୱ ବୀମା</option>
+                <option value="Agricultural Building Repair">କୃଷି ଗୃହ ମରାମତି</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="farmer-type">କୃଷକ ପ୍ରକାର</label>
+              <select id="farmer-type" name="farmerType" required ngModel>
+                <option value="" disabled selected>କୃଷକ ପ୍ରକାର ବାଛନ୍ତୁ</option>
+                <option value="small">ଛୋଟ</option>
+                <option value="semi-Medium">ଅର୍ଦ୍ଧ-ମଧ୍ୟମ</option>
+                <option value="medium">ମଧ୍ୟମ</option>
+                <option value="large">ବଡ଼</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="amount"> ରକମ</label>
+              <input type="number" id="amount" name="amount" placeholder=" ଆପଣଙ୍କ ଦାବି ରାଶି ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="phone">ଫୋନ ନମ୍ବର</label>
+              <input type="tel" id="phone" name="phone" placeholder="ଆପଣଙ୍କ ଫୋନ ନମ୍ବର" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="state">ରାଜ୍ୟ</label>
+              <select id="state" name="state" required ngModel>
+                <option value="" disabled selected>ରାଜ୍ୟ ବାଛନ୍ତୁ</option>
+                <option value="Bihar">ବିହାର</option>
+                <option value="Odisha">ଓଡିଶା</option>
+                <option value="Mizoram">ମିଜୋରାମ</option>
+                <option value="Andhra Pradesh">ଆନ୍ଧ୍ରପ୍ରଦେଶ</option>
+                <option value="Kerala">କେରଳ</option>
+                <option value="Manipur">ମଣିପୁର</option>
+                <option value="Punjab">ପଞ୍ଜାବ</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="district">ଜିଲ୍ଲା</label>
+              <input type="text" id="district" name="district" placeholder="ଆପଣଙ୍କ ଜିଲ୍ଲା" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="bank-name">ବ୍ୟାଙ୍କ ନାମ</label>
+              <input type="text" id="bank-name" name="bankName" placeholder="ବ୍ୟାଙ୍କ ନାମ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="bank-branch">ବ୍ୟାଙ୍କ ବ୍ରାଞ୍ଚ ସଂଖ୍ୟା</label>
+              <input type="text" id="bank-branch" name="bankBranch" placeholder="ବ୍ୟାଙ୍କ ବ୍ରାଞ୍ଚ ନମ୍ବର ପ୍ରବେଶ କରନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="account-number">ସେଭିଂସ୍ ବ୍ୟାଙ୍କ ଖାତା ନମ୍ବର</label>
+              <input type="number" id="account-number" name="accountNumber" placeholder="ସେଭିଂସ୍ ବ୍ୟାଙ୍କ ଖାତା ନମ୍ବର ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="address">ଠିକଣା</label>
+              <input type="text" id="address" name="address" placeholder="ଠିକଣା ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="pincode">ପିନକୋଡ୍</label>
+              <input type="number" id="pincode" name="pincode" placeholder="ପିନକୋଡ୍ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="area-impacted">କ୍ଷତିଗ୍ରସ୍ତ କ୍ଷେତ୍ରଫଳ</label>
+              <input type="number" id="area-impacted" name="areaImpacted" placeholder="କ୍ଷତିଗ୍ରସ୍ତର କ୍ଷେତ୍ରଫଳ ଲେଖନ୍ତୁ" required ngModel />
+            </div>
+            <div class="input-field">
+              <label for="cause-of-loss">କ୍ଷୟକ୍ଷତିର କାରଣ</label>
+              <select id="cause-of-loss" name="causeOfLoss" required ngModel>
+                <option value="" disabled selected>କ୍ଷୟକ୍ଷତିର କାରଣ ବାଛନ୍ତୁ</option>
+                <option value="drought">ଖରା</option>
+                <option value="flood">ବନ୍ୟା</option>
+                <option value="frost">ଥଣ୍ଡା</option>
+                <option value="hailstorm">ଝଡ଼</option>
+                <option value="windstorm">ପବନ ଝଡ଼</option>
+                <option value="excessive_heat">ଅତ୍ୟଧିକ ତାପ</option>
+                <option value="excessive_rainfall">ଅତ୍ୟଧିକ ବର୍ଷା</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">ଯୋଗଦାନ</button>
+      </div>
+    </form>
+  </div>
+</div>

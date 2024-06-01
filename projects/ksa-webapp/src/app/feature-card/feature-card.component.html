@@ -1,0 +1,192 @@
+<button (click)="translate()"  style=" float:right; position: sticky; top: 10px; background-color: #25312d;  " class="mt-2    text-white font-bold py-2 px-4 rounded">
+  {{ getButtonText() }}</button>
+
+<div id="English" class="container flex flex-wrap justify-center items-center gap-6" *ngIf="isEnglishDisplayed">
+  <!-- Card 1 -->
+  <a href="http://localhost:3000/" class="w-60 card mt-4" (mouseenter)="playAudio()" (mouseleave)="pauseAudio()">
+    <div    style="background-color:#364641;color: whitesmoke;" class="p-7c rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-full w-full object-cover rounded-xl" src="./assets/farmer.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">Check Application Status</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 2 -->
+  <a href="#" class="w-60 card mt-4" (mouseenter)="playAudio1()" (mouseleave)="pauseAudio1()" routerLink="/complain">
+    <div style="background-color:#364641;color: whitesmoke;" class="p-7 h-50 bg-green-400 rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-full w-full object-cover rounded-xl" src="./assets/complaint.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">Report Crop Loss</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 3 -->
+  <a href="#" class="w-60 h-70 card mt-4" (mouseenter)="playAudio3()" (mouseleave)="pauseAudio3()" routerLink="/video">
+    <div  style="background-color:#364641;color: whitesmoke;" class="p-7 h-50 rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-full w-full object-cover rounded-xl" src="./assets/video-tutorials.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">Video Tutorial</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 4 -->
+  <a href="https://om-666.github.io/BOT/" class="w-60 card" (mouseenter)="playAudio2()" (mouseleave)="pauseAudio2()">
+    <div style="background-color:#364641;color: whitesmoke;" class="p-7 h-50 rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/krishi-mitra.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">Krishi Mitra</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 5 -->
+  <a href="http://localhost:3000/admin/login" class="w-60 card">
+    <div  style="background-color:#40544e;color: whitesmoke;" class="p-7 h-50  rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/admin-login.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">Admin Login</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 6 -->
+  <a href="https://om-666.github.io/krishi-sahayata-premimum-calculator/" target="_blank" class="w-60 card" (mouseenter)="playAudio4()" (mouseleave)="pauseAudio4()">
+    <div  style="background-color:#40544e;color: whitesmoke;" class="p-7 h-50  rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/calculator.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">Insurance Premium Calculator</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <a href="#" routerLink="/apply" class="w-60 card" (mouseenter)="playAudio5()" (mouseleave)="pauseAudio5()" >
+    <div  style="background-color:#40544e;color: whitesmoke;" class="p-7 h-50  rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/crop-insurance.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">Apply for Crop Insurance</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div id="Odia" class="container flex flex-wrap justify-center items-center gap-6" *ngIf="!isEnglishDisplayed">
+  <!-- Card 1 -->
+  <a href="http://localhost:3000/" class="w-60 card mt-4" (mouseenter)="playAudio()" (mouseleave)="pauseAudio()">
+    <div    style="background-color:#364641;color: whitesmoke;" class="p-7c rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-full w-full object-cover rounded-xl" src="./assets/farmer.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">ଆବେଦନ ସ୍ଥିତି ଯାଞ୍ଚ କରନ୍ତୁ
+        </h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 2 -->
+  <a href="#" class="w-60 card mt-4" (mouseenter)="playAudio1()" (mouseleave)="pauseAudio1()" routerLink="/complain">
+    <div style="background-color:#364641;color: whitesmoke;" class="p-7 h-50 bg-green-400 rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-full w-full object-cover rounded-xl" src="./assets/complaint.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">ଫସଲ କ୍ଷୟକ୍ଷତି ରିପୋର୍ଟ କରନ୍ତୁ
+        </h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 3 -->
+  <a href="#" class="w-60 h-70 card mt-4" (mouseenter)="playAudio3()" (mouseleave)="pauseAudio3()" routerLink="/video">
+    <div  style="background-color:#364641;color: whitesmoke;" class="p-7 h-50 rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-full w-full object-cover rounded-xl" src="./assets/video-tutorials.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">ଭିଡ଼ିଓ ଟ୍ୟୁଟୋରିଆଲ</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 4 -->
+  <a href="https://om-666.github.io/BOT/" class="w-60 card" (mouseenter)="playAudio2()" (mouseleave)="pauseAudio2()">
+    <div style="background-color:#364641;color: whitesmoke;" class="p-7 h-50 rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/krishi-mitra.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">କୃଷି ମିତ୍ର</h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 5 -->
+  <a href="http://localhost:3000/admin/login" class="w-60 card">
+    <div  style="background-color:#40544e;color: whitesmoke;" class="p-7 h-50  rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/admin-login.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">ଆଡମିନ୍‌ ଲଗଇନ୍‌
+        </h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <!-- Card 6 -->
+  <a href="https://om-666.github.io/krishi-sahayata-premimum-calculator/"  class="w-60 card" (mouseenter)="playAudio4()" (mouseleave)="pauseAudio4()">
+    <div  style="background-color:#40544e;color: whitesmoke;" class="p-7 h-50  rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/calculator.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">ଇନ୍ସୁରାନ୍ସ ପ୍ରିମିୟମ କାଲକୁଲେଟର
+        </h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+
+  <a href="#" routerLink="/apply" class="w-60 card" (mouseenter)="playAudio5()" (mouseleave)="pauseAudio5()" >
+    <div  style="background-color:#40544e;color: whitesmoke;" class="p-7 h-50  rounded transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl border border-black">
+      <!-- Image -->
+      <img class="h-40 w-full object-cover rounded-xl" src="./assets/crop-insurance.png" alt="">
+      <div class="p-2">
+        <!-- Heading -->
+        <h2 class="font-bold text-lg mb-2">ଫସଲ ବୀମା ପାଇଁ ଆବେଦନ କରନ୍ତୁ
+        </h2>
+        <!-- Description -->
+      </div>
+    </div>
+  </a>
+</div>

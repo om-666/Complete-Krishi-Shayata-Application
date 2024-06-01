@@ -1,0 +1,160 @@
+<button (click)="translate()"  style=" float:right; position: sticky; top: 10px; background-color: #25312d;" class="mt-2     text-white font-bold py-2 px-4 rounded">
+  {{ getButtonText() }}
+  </button>
+<div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-10 md:py-12 md:px-6 py-9 px-4"> 
+
+<!-- Contact Page  -->
+    <section id="English" style="margin-top: 5px; background: transparent;" class="body" *ngIf="isEnglishDisplayed" >
+      <div class="contactus">
+        <div class="title">
+          <h2  class="text-center text-2xl" style="font-weight: bold; font-size:larger; color: #25312d; margin-bottom: 10px ;">Contact us!</h2>
+        </div>
+        <div class="box">
+          <!-- Form -->
+          <div  class="contact form">
+            <h3>Send a message</h3>
+            <form [formGroup]="form"  (submit)="sendEmail()" >
+              <div class="formbox">
+                <div class="row50">
+                  <div class="inputbox">
+                    <span>First name</span>
+                    <input formControlName="firstname" type="text" placeholder="Enter Your first name " />
+                  </div>
+                  <div class="inputbox">
+                    <span>Last name</span>
+                    <input formControlName="lastname" type="text" placeholder="Enter your last name" />
+                  </div>
+                </div>
+                <div class="row50">
+                  <div class="inputbox">
+                    <span>Email</span>
+                    <input formControlName="email" type="email" placeholder="Enter Your mail" />
+                  </div>
+                  <div class="inputbox">
+                    <span>Mobile</span>
+                    <input formControlName="mobile" type="number" placeholder="Enter Your number" />
+                  </div>
+                </div>
+                <div class="row100">
+                  <div class="inputbox">
+                    <span>Ouery or Message</span>
+                    <textarea formControlName="message" placeholder="Write Your Message"></textarea>
+                  </div>
+                </div>
+                <div class="row100">
+                  <div class="inputbox">
+                    <input   style="background-color: #25312d;" class="rounded-lg  font-semibold text-2xl" type="submit" value="send">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Info box -->
+          <div class="contact info" style="background-color: #25312dba;">
+            <h3 class="mb-10" >Contact Info</h3>
+            <div class="infobox">
+              <div style="margin-bottom: 10px;" >
+                <!-- <span><ion-icon name="location-outline"></ion-icon></span> -->
+                <p>ITER Bhubaneswar</p>
+              </div>
+              <div>
+                <!-- <span><ion-icon name="mail-outline"></ion-icon></span> -->
+                <a href="mailto:loremlipsum@gmail.com"></a>
+                 
+              </div>
+              <div>
+                <!-- <span><ion-icon name="call-outline"></ion-icon></span> -->
+                <a href="mailto:loremlipsum@gmail.com">+916370081836</a>
+                 
+                
+
+                 
+              </div>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="contact map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.216091612362!2d85.80023069999999!3d20.2498709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7a3b9692fff%3A0x87cd0a356bbc39ce!2sITER%2C%20Siksha%20&#39;O&#39;%20Anusandhan!5e0!3m2!1sen!2sin!4v1669797534544!5m2!1sen!2sin"   style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+
+<!-- Contact Page  -->
+<section id="Odia" style="margin-top: 5px; background: transparent;" class="body" *ngIf="!isEnglishDisplayed">
+  <div class="contactus">
+    <div class="title">
+      <h2  class="text-center text-2xl" style="font-weight: bold; font-size:larger; color: #25312d; margin-bottom: 10px ;">ସମ୍ପର୍କ କରନ୍ତୁ!</h2>
+    </div>
+    <div class="box">
+      <!-- Form -->
+      <div  class="contact form">
+        <h3>ଏହି ସନ୍ଦେଶ ପଠାନ୍ତୁ</h3>
+        <form [formGroup]="form"  (submit)="sendEmail()" >
+          <div class="formbox">
+            <div class="row50">
+              <div class="inputbox">
+                <span>ପ୍ରଥମ ନାମ</span>
+                <input formControlName="firstname" type="text" placeholder="ଆପଣଙ୍କ ପ୍ରଥମ ନାମ ଦିଅନ୍ତୁ" />
+              </div>
+              <div class="inputbox">
+                <span>ଶେଷ ନାମ</span>
+                <input formControlName="lastname" type="text" placeholder="ଆପଣଙ୍କ ଶେଷ ନାମ ଲେଖନ୍ତୁ" />
+              </div>
+            </div>
+            <div class="row50">
+              <div class="inputbox">
+                <span>ଇମେଲ</span>
+                <input formControlName="email" type="email" placeholder="ଆପଣଙ୍କ ଇମେଲ ଦିଅନ୍ତୁ" />
+              </div>
+              <div class="inputbox">
+                <span>ମୋବାଇଲ</span>
+                <input formControlName="mobile" type="number" placeholder="ଆପଣଙ୍କ ନମ୍ବର ଦିଅନ୍ତୁ" />
+              </div>
+            </div>
+            <div class="row100">
+              <div class="inputbox">
+                <span>ପ୍ରଶ୍ନ କିମ୍ବା ସନ୍ଦେଶ</span>
+                <textarea formControlName="message" placeholder="ଆପଣଙ୍କ ସନ୍ଦେଶ ଲେଖନ୍ତୁ"></textarea>
+              </div>
+            </div>
+            <div class="row100">
+              <div class="inputbox">
+                <input   style="background-color: #25312d;" class="rounded-lg  font-semibold text-2xl" type="submit" value="send">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Info box -->
+      <div class="contact info" style="background-color: #25312dba;">
+        <h3 class="mb-10" >ଯୋଗାଯୋଗ ସୂଚନା</h3>
+        <div class="infobox">
+          <div style="margin-bottom: 10px;" >
+            <!-- <span><ion-icon name="location-outline"></ion-icon></span> -->
+            <p>ITER ଭୁବନେଶ୍ୱର</p>
+          </div>
+          <div>
+            <!-- <span><ion-icon name="mail-outline"></ion-icon></span> -->
+            <a href="mailto:loremlipsum@gmail.com"></a>
+             
+          </div>
+          <div>
+            <!-- <span><ion-icon name="call-outline"></ion-icon></span> -->
+            <a href="mailto:loremlipsum@gmail.com">+916370081836</a>
+             
+            
+
+             
+          </div>
+        </div>
+      </div>
+      <!-- Map -->
+      <div class="contact map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.216091612362!2d85.80023069999999!3d20.2498709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7a3b9692fff%3A0x87cd0a356bbc39ce!2sITER%2C%20Siksha%20&#39;O&#39;%20Anusandhan!5e0!3m2!1sen!2sin!4v1669797534544!5m2!1sen!2sin"   style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+ 
