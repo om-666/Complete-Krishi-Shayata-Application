@@ -83,4 +83,4 @@ KSA includes a chatbot named Krishi Mitra to assist farmers in using the applica
 
 [![Krishi Sahayata Video](https://img.youtube.com/vi/UKb_AEvN8ZY/0.jpg)](https://youtu.be/UKb_AEvN8ZY)
 
-This README provides an overview of the project, its features, and the technologies used. Feel free to add or modify content to suit your project's needs.
+ 
